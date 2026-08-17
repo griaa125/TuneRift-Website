@@ -1,5 +1,104 @@
-# TuneRift GitHub Pages
+# TuneRift Website
 
-This folder contains the static GitHub Pages version of the TuneRift website. It includes the landing page, release downloads, screenshots, and the GitHub link. The community ideas page remains on the primary website because it requires authentication and a database.
+Официальная статическая landing page-страница проекта **TuneRift Mod**, опубликованная через GitHub Pages.
 
-GitHub Pages is configured to publish this `docs/` folder directly from the `main` branch.
+Сайт рассказывает о возможностях TuneRift Mod, показывает интерфейс и скриншоты приложения, содержит ссылки на исходный код и прямые ссылки на установщики для Windows, macOS и Linux.
+
+## Сайт
+
+Открыть сайт можно по адресу:
+
+[https://griaa125.github.io/TuneRift-Website/](https://griaa125.github.io/TuneRift-Website/)
+
+## Основной проект
+
+Исходный код TuneRift Mod, аддоны, Electron-расширения и релизы находятся в отдельном репозитории:
+
+[https://github.com/griaa125/TuneRift-Mod](https://github.com/griaa125/TuneRift-Mod)
+
+Последний релиз:
+
+[https://github.com/griaa125/TuneRift-Mod/releases/latest](https://github.com/griaa125/TuneRift-Mod/releases/latest)
+
+## Что есть на сайте
+
+Сайт содержит следующие разделы:
+
+- описание TuneRift Mod и его назначения;
+- классический дизайн Яндекс Музыки;
+- Discord Rich Presence с timeline;
+- меню настроек и управление аддонами;
+- размытие текста песен в стиле Apple Music;
+- маркировка контента 18+ символом `E`;
+- UI-улучшения Electron-версии;
+- полноэкранный режим;
+- скриншоты приложения;
+- прямые ссылки на установщики Windows, macOS и Linux;
+- ссылка на репозиторий исходного кода.
+
+## Структура файлов
+
+```text
+TuneRift-Website/
+├── assets/        # Логотипы и скриншоты сайта
+├── index.html     # Главная страница
+├── styles.css     # Стили и адаптивная вёрстка
+└── README.md      # Описание сайта
+```
+
+## GitHub Pages
+
+GitHub Pages публикует сайт из корня ветки `main`.
+
+Настройки репозитория:
+
+```text
+Settings → Pages
+Source: Deploy from a branch
+Branch: main
+Folder: / (root)
+```
+
+Файл `index.html` должен находиться в корне репозитория. Перемещение его в папку `docs` не требуется.
+
+## Обновление сайта
+
+Чтобы изменить сайт, отредактируй нужный файл и создай commit в ветке `main`. GitHub Pages автоматически обновит опубликованную страницу через некоторое время.
+
+При добавлении изображений помещай их в `assets/`, а в HTML используй относительные пути:
+
+```html
+<img src="assets/example.png" alt="Описание изображения">
+```
+
+Для таблицы стилей используй относительный путь:
+
+```html
+<link rel="stylesheet" href="styles.css">
+```
+
+Не используй пути, начинающиеся с `/`, например `/styles.css` или `/assets/example.png`, потому что сайт работает внутри подпути `/TuneRift-Website/`.
+
+## Ссылки на скачивание
+
+Сайт использует файлы из GitHub Release `v1.0.0`:
+
+- Windows: `TuneRift-Mod-Setup.exe`;
+- macOS: `TuneRift-Mod-Mac-Universal.dmg`;
+- Linux: `TuneRift-Mod-linux-x64`.
+
+При публикации нового релиза необходимо обновить тег версии и имена файлов в ссылках внутри `index.html`.
+
+## Раздел «Идеи»
+
+Ссылка «Идеи» пока ведёт на основную версию сайта TuneRift, потому что этот раздел использует авторизацию и базу данных. Статическая GitHub Pages-версия предназначена для презентации проекта и скачивания приложений.
+
+## Ограничения
+
+Это статический сайт без серверной части. GitHub Pages не выполняет серверный JavaScript и не предоставляет базу данных или авторизацию. Для таких функций используется основной сайт проекта.
+
+## Правовой статус
+
+TuneRift Mod — неофициальная пользовательская модификация Яндекс Музыки. Проект не связан с Яндексом, Discord или PulseSync. Названия и товарные знаки сторонних сервисов принадлежат их правообладателям.
+
+© 2026 TuneRift Mod.
